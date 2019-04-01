@@ -12,6 +12,7 @@ https://api.telegram.org/botBOT_TOKEN/setwebhook?url=https://site.name/bot.php
 
 
 
+![Screenshot](http://wapos.uz/pub/img/test.jpg)
 
 
 **Bu yozilgan kodlarni sotish taqiqlanadi!**
