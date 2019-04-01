@@ -11,7 +11,7 @@ class TelegramBot {
 
 
     public function go($method,$datas=[]){
- 		$botToken = "776501213:AAFi2J8xLfDF57WrrLkw1F7cSYE69cPXq_g";
+ 		$botToken = "734124540:AAEqcM337os_zS7llX3D1FrIsTv_17wNtiw";
         $url = "https://api.telegram.org/bot".$botToken."/".$method;
         $ch = curl_init();
         curl_setopt($ch,CURLOPT_URL,$url);
