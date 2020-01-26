@@ -19,4 +19,4 @@ https://api.telegram.org/botBOT_TOKEN/setwebhook?url=https://site.name/bot.php
 
 **Telegram:** [@Mukxtarov](https://t.me/mukxtarov)
 
-[Wapos.uz](http://wapos.uz/lesson/1_php-5.html)
+[I'm Mukhtarov](https://t.me/imukhtarov)
