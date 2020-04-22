@@ -1,5 +1,5 @@
 # Telegram-bot-simple
-Juda qulay va oson Telegramda bot yaratish uchun tayyorlangan fremworkcha!
+Juda qulay va oson Telegramda bot yaratish uchun tayyorlangan!
 <hr>
 Botni o'rnatish:
 

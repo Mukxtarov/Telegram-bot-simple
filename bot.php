@@ -1,19 +1,22 @@
-<?php 
+<?php
 /**
  * Mukhtarov Umidshox
- * 01.04.2019
+ * 22.04.2020
  * Telegram: @Mukxtarov
  */
 require 'app/controller.php';
-use app\TelegramBot;
+
+use App\TelegramBot;
 
 date_default_timezone_set('Asia/Tashkent');
 
-$bot = new TelegramBot;
+//Bot tokeni
+$token = "";
 
 //Bot ID raqami
 $botid = '';
 
+$bot = new TelegramBot($token);
 
 $data = $bot->getData("php://input");
 $chat_id = $data['message']['chat']['id'];
@@ -42,7 +45,12 @@ $call_message_id = $callback['message']['message_id'];
 $audio = $data['message']['audio'];
 
 
+//PHOTO
+$photo = $data['message']['photo'];
 
+
+//VIDEO
+$video = $data['message']['video'];
 
 
 $key = $bot->InlineKeyboard([
@@ -56,12 +64,13 @@ $keyedit = $bot->InlineKeyboard([
 
 if($text == "/start"){
 	$bot->sendMessage([
-		'chat_id' => $chat_id, 
-		'text' => "<b>Hello</b>\n\n<i>Hello</i>\n\n<code>Hello</code>", 
-		'parse_mode' => 'HTML', 
+		'chat_id' => $chat_id,
+		'text' => "<b>Hello</b>\n\n<i>Hello</i>\n\n<code>Hello</code>",
+		'parse_mode' => 'HTML',
 		'reply_markup' => $key
 	]);
 }
+
 
 elseif($call_data == 'hello'){
 	$bot->editMessageText([
@@ -72,10 +81,11 @@ elseif($call_data == 'hello'){
 		'reply_markup' => $keyedit
 	]);
 	$bot->answerCallbackQuery([
-		'callback_query_id' => $callback_id, 
+		'callback_query_id' => $callback_id,
 		'text' => "Notification: Hello"
 	]);
 }
+
 
 elseif($call_data == 'how'){
 	$bot->editMessageText([
@@ -86,7 +96,7 @@ elseif($call_data == 'how'){
 		'reply_markup' => $key
 	]);
 	$bot->answerCallbackQuery([
-		'callback_query_id' => $callback_id, 
+		'callback_query_id' => $callback_id,
 		'text' => "Notification: How are you?"
 	]);
 }
