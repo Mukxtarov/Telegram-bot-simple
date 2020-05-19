@@ -52,7 +52,7 @@ $key_edit = $bot->InlineKeyboard([
 
 $keyboard = $bot->ReplyKeyboardMarkup([
    ['😄🖐 Hello world!']
-]);
+], true);
 
 if($text == "/start"){
 	$bot->sendMessage([
