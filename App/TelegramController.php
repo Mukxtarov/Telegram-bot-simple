@@ -69,7 +69,7 @@ final class TelegramController
      * @param $type
      * @return array
      */
-    public function sendChatAction($type){
+    public function sendChatAction(array $type){
         return $this->request('sendChatAction', $type);
     }
 
@@ -78,7 +78,7 @@ final class TelegramController
      * @param $type
      * @return array
      */
-    public function sendPhoto($type){
+    public function sendPhoto(array $type){
         return $this->request('sendPhoto', $type);
     }
 
@@ -87,7 +87,7 @@ final class TelegramController
      * @param $type
      * @return array
      */
-    public function sendAudio($type){
+    public function sendAudio(array $type){
         return $this->request('sendAudio', $type);
     }
 
@@ -96,7 +96,7 @@ final class TelegramController
      * @param $type
      * @return array
      */
-    public function sendVideo($type){
+    public function sendVideo(array $type){
         return $this->request('sendVideo', $type);
     }
 
@@ -105,7 +105,7 @@ final class TelegramController
      * @param $type
      * @return array
      */
-    public function sendVoice($type){
+    public function sendVoice(array $type){
         return $this->request('sendVoice', $type);
     }
 
@@ -114,7 +114,7 @@ final class TelegramController
      * @param $type
      * @return array
      */
-    public function getFile($type){
+    public function getFile(array $type){
         return $this->request('getFile', $type);
     }
 
@@ -124,7 +124,7 @@ final class TelegramController
      * @param $type
      * @return array
      */
-    public function forwardMessage($type){
+    public function forwardMessage(array $type){
         return $this->request('forwardMessage', $type);
     }
 
@@ -134,18 +134,24 @@ final class TelegramController
      * @param $type
      * @return false|string
      */
-    public function inlineKeyboard($type){
+    public function inlineKeyboard(array $type){
         return json_encode(['inline_keyboard' => $type]);
     }
 
     /**
      * Create a simple keyboard
      * Oddiy keyboard yaratish
-     * @param $type
+     * @param array $type
+     * @param bool $resize
+     * @param bool $one_time
      * @return false|string
      */
-    public function ReplyKeyboardMarkup($type){
-        return json_encode(['keyboard' => $type]);
+    public function ReplyKeyboardMarkup(array $type, bool $resize = false, bool $one_time = false){
+        return json_encode([
+            'keyboard' => $type,
+            'resize_keyboard' => $resize,
+            'one_time_keyboard' => $one_time
+        ]);
     }
 
     /**
@@ -154,7 +160,7 @@ final class TelegramController
      * @param $type
      * @return array
      */
-    public function answerCallbackQuery($type){
+    public function answerCallbackQuery(array $type){
         return $this->request('answerCallbackQuery', $type);
     }
 
@@ -164,7 +170,7 @@ final class TelegramController
      * @param $type
      * @return array
      */
-    public function deleteMessage($type){
+    public function deleteMessage(array $type){
         return $this->request('deleteMessage', $type);
     }
 
@@ -174,7 +180,7 @@ final class TelegramController
      * @param $type
      * @return array
      */
-    public function getChatMember($type){
+    public function getChatMember(array $type){
         return $this->request('getChatMember', $type);
     }
 
@@ -184,7 +190,7 @@ final class TelegramController
      * @param $type
      * @return array
      */
-    public function getChatMembersCount($type){
+    public function getChatMembersCount(array $type){
         return $this->request('getChatMembersCount', $type);
     }
 
@@ -194,7 +200,7 @@ final class TelegramController
      * @param $type
      * @return array
      */
-    public function editMessageText($type){
+    public function editMessageText(array $type){
         return $this->request('editMessageText', $type);
     }
 

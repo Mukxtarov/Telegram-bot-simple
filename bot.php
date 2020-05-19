@@ -15,7 +15,6 @@ $config = require __DIR__.'/config.php';
 $bot = new TelegramController($config['token']);
 
 
-
 $data = $bot->getData("php://input");
 $chat_id = $data['message']['chat']['id'];
 $user_id = $data['message']['from']['id'];
@@ -52,7 +51,7 @@ $key_edit = $bot->InlineKeyboard([
 ]);
 
 $keyboard = $bot->ReplyKeyboardMarkup([
-   [['Hello world!']]
+   ['😄🖐 Hello world!']
 ]);
 
 if($text == "/start"){
@@ -64,6 +63,14 @@ if($text == "/start"){
 	]);
 }
 
+if($text == "/inline"){
+    $bot->sendMessage([
+        'chat_id' => $chat_id,
+        'text' => "<b>Hello</b>\n\n<i>Hello</i>\n\n<code>Hello</code>",
+        'parse_mode' => 'HTML',
+        'reply_markup' => $key
+    ]);
+}
 
 elseif($call_data == 'hello'){
 	$bot->editMessageText([
