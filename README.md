@@ -1,19 +1,19 @@
-# Telegram-bot-simple
-Juda qulay va oson Telegramda bot yaratish uchun tayyorlangan!
-<hr>
-Botni o'rnatish:
+#  Telegram bot simple :fire:
+
+##### :rocket: Tez, qulay, oson telegramda bot yaratish uchun tayyorlangan!
+##### :rocket: Made to create a bot in a fast, convenient, easy telegram!
+
+##### :ballot_box_with_check: Botni o'rnatish:
+##### :ballot_box_with_check: Install bot:
+
+- [x] ```git clone https://github.com/Mukxtarov/Telegram-bot-simple.git ```
+- [x] ```config.php -> token => "TOKEN"```
+- [x] ```https://api.telegram.org/botBOT_TOKEN/setwebhook?url=https://site.name/bot.php```
 
 
-1.git clone https://github.com/Mukxtarov/Telegram-bot-simple.git
+##### **:x: Bu yozilgan kodlarni sotish taqiqlanadi!**
+##### **:x: It is forbidden to sell written codes!**
 
-2.Webhook o'rnating
+##### **:envelope: Telegram:** [@Mukxtarov](https://t.me/mukxtarov)
+##### **:e-mail: Email:** [mukxtarov@mail.ru](https://mail.ru)
 
-https://api.telegram.org/botBOT_TOKEN/setwebhook?url=https://site.name/bot.php
-
-
-
-**Bu yozilgan kodlarni sotish taqiqlanadi!**
-
-**Telegram:** [@Mukxtarov](https://t.me/mukxtarov)
-
-[I'm Mukhtarov](https://t.me/imukhtarov)
