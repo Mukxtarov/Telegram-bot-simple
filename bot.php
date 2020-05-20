@@ -63,7 +63,7 @@ if($text == "/start"){
 	]);
 }
 
-if($text == "/inline"){
+if($text == "😄🖐 Hello world!"){
     $bot->sendMessage([
         'chat_id' => $chat_id,
         'text' => "<b>Hello</b>\n\n<i>Hello</i>\n\n<code>Hello</code>",
